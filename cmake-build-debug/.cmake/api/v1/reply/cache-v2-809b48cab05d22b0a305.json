@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/arthurmathis/Library/Mobile Documents/com~apple~CloudDocs/Developpement/Desktop App/traitement-images/cmake-build-debug"
+			"value" : "/Users/arthurmathis/Desktop/traitement-images/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -479,7 +479,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/arthurmathis/Library/Mobile Documents/com~apple~CloudDocs/Developpement/Desktop App/traitement-images/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/Users/arthurmathis/Desktop/traitement-images/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -539,7 +539,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/arthurmathis/Library/Mobile Documents/com~apple~CloudDocs/Developpement/Desktop App/traitement-images"
+			"value" : "/Users/arthurmathis/Desktop/traitement-images"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -1111,7 +1111,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/arthurmathis/Library/Mobile Documents/com~apple~CloudDocs/Developpement/Desktop App/traitement-images/cmake-build-debug"
+			"value" : "/Users/arthurmathis/Desktop/traitement-images/cmake-build-debug"
 		},
 		{
 			"name" : "traitement_images_IS_TOP_LEVEL",
@@ -1135,7 +1135,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/arthurmathis/Library/Mobile Documents/com~apple~CloudDocs/Developpement/Desktop App/traitement-images"
+			"value" : "/Users/arthurmathis/Desktop/traitement-images"
 		}
 	],
 	"kind" : "cache",

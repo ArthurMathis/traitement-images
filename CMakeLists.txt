@@ -5,4 +5,5 @@ set(CMAKE_CXX_STANDARD 23)
 
 add_executable(traitement_images main.cpp
         image.cpp
-        image.h)
+        image.h
+)

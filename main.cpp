@@ -3,5 +3,6 @@
 
 int main() {
     image img{"src/Bouquet.ppm"};
-    img.NiveauxDeGris("src/BouquetGris.ppm");
+    //img.NiveauxDeGris("src/BouquetGris.ppm");
+    img.RougeEtGris("src/BouquetRougeEtGris.ppm");
 }

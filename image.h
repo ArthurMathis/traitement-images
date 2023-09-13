@@ -8,7 +8,7 @@
 #include <string>
 
 struct pixel{
-    unsigned r,g,b;
+    unsigned red, green, blue;
 };
 
 class image {
@@ -19,6 +19,7 @@ public:
     void setSource(std::string source);
 
     void NiveauxDeGris(std::string source) const;
+    void RougeEtGris(std::string source) const;
 
 private:
     std::string d_source;
