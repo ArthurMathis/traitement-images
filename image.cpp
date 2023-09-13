@@ -9,6 +9,8 @@
 
 using std::endl;
 
+using std::cout;
+
 image::image(std::string source):d_source{source}
 {
 }
@@ -90,5 +92,61 @@ void image::RougeEtGris(std::string source) const
         fout<<endl;
     }
     fin.close();
+    fout.close();
+}
+
+void image::reduction(std::string source) const
+{
+    // Initialisation du téléchargement
+    std::ifstream fin(d_source);
+    if(!fin){
+        std::cout<<"erreur";
+        return;
+    }
+
+    std::string mem;
+    unsigned hauteur, largeur;
+    fin>>mem>>largeur>>hauteur>>mem;
+
+    // DOWNLOAD
+    std::vector<std::vector<pixel> > object(hauteur, std::vector<pixel>(largeur));
+    for(unsigned i = 0; i < hauteur; i++){
+        for(unsigned j = 0; j < largeur; j++){
+            fin>>object[i][j].red;
+            fin>>object[i][j].green;
+            fin>>object[i][j].blue;
+        }
+    }
+    fin.close();
+
+    unsigned dimh = static_cast<unsigned>(hauteur / 2);
+    unsigned diml = static_cast<unsigned>(largeur / 2);
+    if(dimh % 2 != 0) dimh++;
+    if(diml % 2 != 0) diml++;
+
+    cout<<diml<<" "<<diml<<endl;
+
+    for(unsigned i{0}; i < diml; i++) {
+        for (unsigned j{0}; j < dimh; j++) {
+            object[i][j].red = object[2 * i][2 * j].red;
+            object[i][j].green = object[2 * i][2 * j].green;
+            object[i][j].blue = object[2 * i][2 * j].blue;
+        }
+    }
+    object.resize(dimh,std::vector<pixel>(diml));
+
+    // Initialisation de l'exportation
+    std::ofstream fout(source);
+    fout<<"P3"<<endl<<diml<<endl<<dimh<<endl<<mem<<endl;
+
+    // EXPORTATION
+    for(int i= 0; i < dimh; i++){
+        for(int y = 0; y < diml; y++) {
+            fout<<object[i][y].red<<" "
+            <<object[i][y].green<<" "
+            <<object[i][y].blue<<" ";
+        }
+        fout<<endl;
+    }
     fout.close();
 }

@@ -41,6 +41,11 @@ public:
      * @param source
      */
     void RougeEtGris(std::string source) const;
+    /**
+     * @brief Méthode générant depuis l'image, une image plus petite
+     * @param source
+     */
+    void reduction(std::string source) const;
 
 private:
     std::string d_source;
